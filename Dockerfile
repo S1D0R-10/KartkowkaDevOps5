@@ -13,4 +13,4 @@ COPY --from=builder /src/server /app/server
 
 EXPOSE 8080
 
-CMD ["./app"]
+CMD ["./server"]

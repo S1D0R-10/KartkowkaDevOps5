@@ -1,0 +1,6 @@
+services:
+  web:
+    build: .
+    image: go-docker:latest
+    ports:
+      - "8080:8081"

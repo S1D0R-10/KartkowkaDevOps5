@@ -53,16 +53,7 @@ jobs:
       - name: export image jako tar
         run: |
           docker save go-docker:latest | gzip > go-docker-image.tar.gz
-
-      - name: Upload artifactsy
-        uses: actions/upload-artifact@v4
-        with:
-          name: deploy artifacts
-          path: |
-            compose-logs.txt
-            compose-ps.txt
-            go-docker-image.tar.gz
-
+          
       - name: sumary
         run: |
           echo "## Deploy Sumary" >> $GITHUB_STEP_SUMMARY
